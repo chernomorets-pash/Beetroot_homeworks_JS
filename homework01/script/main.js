@@ -39,7 +39,7 @@ let taskTwoMax = function () {
 let taskThreeMax = function () {
     const EX_RATE_EUR_TO_USD = 0.88;
     let userValue = +prompt ('Enter value of USD to convert in EUR: ');
-    let convUsdToEur = userValue / EX_RATE_EUR_TO_USD;
+    let convUsdToEur = userValue * EX_RATE_EUR_TO_USD;
     alert (`${userValue}$ converted to EUR will be: ${convUsdToEur.toFixed(2)} Euros`);
 };
 // Buttons for Maximum
