@@ -1,48 +1,63 @@
-// main script with logic of index page
-let btnTaskOne = document.getElementById('btn__hw-1');
-let btnTaskTwo = document.getElementById('btn__hw-2');
-// Tasks wrapped inside function
-// Task one and two
-let taskOneNorm = function() {
-    let userName = prompt('What is your name?');
-    alert(`Hi, ${userName}`);
-    let userYearOfBirdth = +prompt('What is your year of birth?');
-    const CURRENT_YEAR = 2022;
-    let calculatedYear = (CURRENT_YEAR - userYearOfBirdth);
-    alert(`You are ${calculatedYear} years old.`);
-};
-// Task 3
-let taskThreeNorm = function() {
-    let userLength = +prompt('Please enter the lenght of squere side: ');
-    let pOfSquare = 4 * userLength;
-    alert (`Perimeter of the square with side size ${userLength} is ${pOfSquare}`);
-};
-// Buttons for Normal
-btnTaskOne.addEventListener('click', taskOneNorm);
-btnTaskTwo.addEventListener('click', taskThreeNorm);
-// Maximum
-let btnTaskOneMax = document.getElementById('btn__hw-3');
-let btnTaskTwoMax = document.getElementById('btn__hw-4');
-let btnTaskThreeMax = document.getElementById('btn__hw-5');
-let taskOneMax = function() {
-    let userRadius = +prompt ('Please enter Radius of Circle: ');
-    const PI = 3.14;
-    let sOfCircle = PI * Math.pow(userRadius, 2);
-    alert(`area of a circle with Radius ${userRadius} will be ${sOfCircle}`)
-};
-let taskTwoMax = function() {
-    let userDistance = +prompt ("Please enter distance in kilometers between two cities");
-    let userPreferedTime = +prompt ("How many hours would you like to spend on road?");
-    let speedToReach = userDistance / userPreferedTime;
-    alert (`The distance betweed cities is ${userDistance} km, if you will be on road for ${userPreferedTime} hours, you need to move with ${speedToReach} km/hour`)
-};
-let taskThreeMax = function() {
-    const EX_RATE_EUR_TO_USD = 0.88;
-    let userValue = +prompt ('Enter value of USD to convert in EUR: ');
-    let convUsdToEur = userValue * EX_RATE_EUR_TO_USD;
-    alert (`${userValue}$ converted to EUR will be: ${convUsdToEur.toFixed(2)} Euros`);
-};
-// Buttons for Maximum
-btnTaskOneMax.addEventListener('click', taskOneMax);
-btnTaskTwoMax.addEventListener('click', taskTwoMax);
-btnTaskThreeMax.addEventListener('click', taskThreeMax);
+// Buttons declaration 
+// Min level
+const btnMin1 = document.querySelector('#btn__min__t1');
+const btnMin2 = document.querySelector('#btn__min__t2');
+const btnMin3 = document.querySelector('#btn__min__t3');
+const btnNorm1 = document.querySelector('#btn__norm__t1');
+const btnNorm2 = document.querySelector('#btn__norm__t2');
+const btnMax1 = document.querySelector('#btn__max__t1');
+// Activation function listening to click on button
+// Min level - task #1
+btnMin1.addEventListener('click', ()=>{
+    let a = 0.1;
+    let b = 0.2;
+    let result = a + b;
+    console.log (`Original result of ${a}+${b}=${result}; To get correct calculation, one of the option to
+    use methon .toFixed that will cut of cirtan ammount of numbers after dot, like: ${+result.toFixed(2)}`);
+});
+// Min level - task #2
+btnMin2.addEventListener('click',()=>{
+    let string = '1';
+    let number = 2;
+    let result = +string+number;
+    console.log(`${string}+${number}=${result}`);
+});
+// Min level - task 3
+btnMin3.addEventListener('click', ()=>{
+    const MB_IN_GB = 1000;
+    const FILE = 820;
+    let userFlash = +prompt('Enter capacity of you flash drive in Gigabites: ');
+    // converting user GB to MB
+    let userMbinGb = userFlash*MB_IN_GB;
+    console.log(`user MB on flash drive: ${userMbinGb}`);
+    let filesToFlash = userMbinGb/FILE;
+    console.log(`on flash drive with capacity: ${userFlash}GB will be ${Math.floor(filesToFlash)} files with size of 820 Mb;`)
+});
+btnNorm1.addEventListener('click', ()=>{
+    let userMoney = +prompt('Please enter amount of USD you have in your pocket: ');
+    let userChocoPrice = +prompt('What is the price of your favorite bar? ');
+    let amountOfChoco = Math.floor(userMoney/userChocoPrice);
+    let change = userMoney%userChocoPrice;
+    console.log(`There is ${userMoney} USD in your pocket, so you can buy ${amountOfChoco} chocolates
+    if the price of one bar is ${userChocoPrice} USD, and it will remain ${+change.toFixed(3)} USD in your pocket`);
+});
+btnNorm2.addEventListener('click', ()=>{
+    let number = prompt('Enter 3-sybmol number for reverse: ');
+    let reverse = 'Reverse: ';
+    for (let i=0; i<3; i++) {
+        let result = number%10;
+        number = Math.floor(number/10);
+        reverse += String(result);
+        }
+    console.log(reverse);
+});
+btnMax1.addEventListener('click', ()=>{
+    const YEAR_PR = 5;
+    let userMonths = 2;
+    let userMoney = +prompt('How much money would you like to invest: ', '0')
+    let yearlyPr = userMoney/100*YEAR_PR;
+    let monthlyPr = yearlyPr/12;
+    alert(`If you invest ${userMoney}$ for ${userMonths} mothes, with ${YEAR_PR}% yearly procent, 
+    you will get: ${Math.round(monthlyPr*userMonths)}$`);
+})
+
