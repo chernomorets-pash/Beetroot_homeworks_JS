@@ -12,6 +12,9 @@ button {
     cursor: pointer;
     outline: none;
 }
+h3 {
+    font-weight: 100;
+}
 /* Main styles */
 .app {
     font-family: 'Outfit', sans-serif;
