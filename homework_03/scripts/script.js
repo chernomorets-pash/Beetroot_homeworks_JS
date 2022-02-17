@@ -16,7 +16,23 @@ const btnMax2 = document.querySelector('#btn__max__t2');
 // Activation function listening to click on button
 // Min level - task #1
 btnMin1.addEventListener('click', ()=>{
-    let userAge = +prompt("Please, enter your age: ");
+    let userAge =+prompt("Please, enter your age: ", 1);
+    for (let i = 0; i <=1; i++) {
+        if (userAge > 100 && userAge < 0){
+            console.log('Wrong input, try again')
+            i--;
+        }else {
+            if (userAge >= 0 && userAge <= 2) {
+                console.log("you are baby");
+            } else if (userAge >= 12 && userAge <= 18) {
+                console.log("you are child");
+            } else if (userAge >= 18 && userAge < 60) {
+                console.log("you are adult");
+            } else if (userAge >= 60) {
+                console.log("you are on pension")
+            }
+        }
+    }
         if (userAge >= 0 && userAge <= 2) {
             console.log("you are baby");
         } else if (userAge >= 12 && userAge <= 18) {
@@ -29,35 +45,45 @@ btnMin1.addEventListener('click', ()=>{
 });
 // Min level - task #2
 btnMin2.addEventListener('click',()=>{
-    let userNum = +prompt ('Please enter number from 0 - 9');
-    if (userNum == 1) {
-        console.log('0 is !')
-    }else if (userNum == 2) {
-        console.log('1 is @')
-    }else if (userNum == 3) {
-        console.log('2 is @')
-    } else if (userNum == 3) {
-        console.log('3 is #')
-    }else if (userNum == 4) {
-        console.log('4 is $')
-    } else if (userNum == 5) {
-        console.log('5 is %')
-    }else if (userNum == 6) {
-        console.log('6 is ^')
-    } else if (userNum == 7) {
-        console.log('7 is &')
-    }else if (userNum == 8) {
-        console.log('8 is *')
-    } else if (userNum == 9) {
-        console.log('9 is (')
-    } else {
-        console.log('Wrong number');
+    let userNum= +prompt('Please enter number from 0 - 9');
+    switch (userNum) {
+        case 0: 
+            console.log('0 == )');
+            break;
+        case 1:
+            console.log('1 == !');
+            break;
+        case 2: 
+            console.log('2 == @');
+            break;
+        case 3:
+            console.log('3 == #');
+            break;
+        case 4: 
+            console.log('4 == $');
+            break;
+        case 5:
+            console.log('5 == %');
+            break;
+        case 6: 
+            console.log('6 == ^');
+            break;
+        case 7:
+            console.log('7 == &');
+            break;
+        case 8: 
+            console.log('8 == *');
+            break;
+        case 9:
+            console.log('9 == (');
+            break;
+        default: console.log(`${userNum} is wrong Input`); 
     }
 });
 // Min level - task #3
 btnMin3.addEventListener('click', ()=>{
-    let start = +prompt ('Enter start diapason:', 1);
-    let stop = +prompt ('Enter start diapason:', 1);
+    let start = +prompt('Enter start diapason:', 1);
+    let stop = +prompt('Enter start diapason:', 1);
     let result=0;
     for (let i = start; i <= stop; i++) {
         result += i;
@@ -68,8 +94,8 @@ btnMin3.addEventListener('click', ()=>{
 // Min level - task #4
 btnMin4.addEventListener('click', ()=>{
     let nod;
-    let a = +prompt ("Введите число: ",);
-    let b = +prompt ("Введите число: ");
+    let a = +prompt("Введите число: ",);
+    let b = +prompt("Введите число: ");
     while (a != b) {
         if (a>b){
             a = a-b;
@@ -81,7 +107,7 @@ btnMin4.addEventListener('click', ()=>{
 })
 // Min level - taask #5
 btnMin5.addEventListener('click', ()=>{
-    let number = +prompt ("Введите число: ");
+    let number = +prompt("Введите число: ");
     for (let i=1; i <= number; i++) {
         if (number % i == 0) {
             console.log(i);
@@ -91,7 +117,6 @@ btnMin5.addEventListener('click', ()=>{
 // Norm level - task #1
 btnNorm1.addEventListener('click', ()=>{
     let number = prompt('Enter the number from 10000 to 99999', 0);
-        number = number + '';
         if (number === number.split('').reverse().join(''))
             alert('palindrome');
         else
@@ -122,7 +147,7 @@ btnNorm3.addEventListener('click', ()=>{
             odd=0,
             zero=0;
         for (let i =0; i <= 10; i++) {
-            userNum = +prompt ("enter your number: ");
+            userNum = +prompt("enter your number: ");
             if (userNum == 0) {
                 zero++;
             } 
