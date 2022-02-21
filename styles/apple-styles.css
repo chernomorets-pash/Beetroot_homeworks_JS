@@ -1,0 +1,192 @@
+/* Fonts */
+@font-face {
+    font-family: "Fairfax";
+    src: url('../fonts/webfonts_Fairfax/Fairfax.ttf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Variables */
+/* BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+    font-family: "Fairfax";
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Styles of main page */
+.apple {
+    font-family: Fairfax;
+    height: 100vh;
+    background-color: rgb(146, 145, 143);
+}
+
+/* navigation and status bar */
+.header {
+    background-color: whitesmoke;
+}
+
+.nav__menu {
+    padding: 2px 3px;
+    max-height: 1.3rem;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    padding: 2px 5px;
+}
+
+.nav__logo-img {
+    width: 12px;
+}
+
+.nav__link {
+    color: black;
+}
+
+.nav__link:hover {
+    color: rgb(94, 94, 94);
+}
+
+.main {
+    height: 95vh;
+    position: relative;
+}
+
+.main__icon {
+    width: 5%;
+    right: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    cursor: pointer;
+}
+
+.main__app:hover {
+    opacity: 0.1;
+}
+
+.js-wrapper {
+    width: 55%;
+    height: 30%;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    min-height: 135px;
+    max-width: 435px;
+}
+
+.js-wrapper__title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+#exit__btn {
+    border: 1px solid black;
+    width: 10px;
+    height: 10px;
+    align-self: center;
+    position: absolute;
+    left: 5px;
+}
+
+#exit__btn:hover {
+    background-color: red;
+}
+
+.window-hide {
+    display: none;
+}
+
+.window-show {
+    display: block;
+}
+
+.js__header {
+    display: flex;
+    justify-content: center;
+}
+
+.js__title {
+    text-align: center;
+    color: gray;
+    font-size: small;
+}
+
+.js__menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.js__input {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.js__btn {
+    flex-grow: 1;
+    width: 25%;
+    border: 0.5px dotted black;
+    padding: 1px;
+    margin: 1px;
+}
+
+.js__btn:hover {
+    color: gray;
+}
+
+.js__result {
+    margin: 0 20px;
+}
+
+.btn_icons {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid black;
+}
+.js__links{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
