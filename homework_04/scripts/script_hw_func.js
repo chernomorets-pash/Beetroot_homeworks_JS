@@ -2,7 +2,7 @@
 // 2. Створи функцію, яка буде виводити кількість переданих їй аргументів.
 let minimumTwo = function () {
     let agrInFunc = arguments.length;
-    return console.log(`Total number of argument in function: ${agrInFunc}`);
+    console.log(`Total number of argument in function: ${agrInFunc}`);
 }
 // 3. Напиши функцію, яка приймає 2 числа і повертає :
 // -1, якщо перше число менше, ніж друге; 
@@ -12,9 +12,9 @@ let minimumThree = function (a = 0, b = 0) {
     if (a < b) {
         return console.log(-1);
     } else if (a > b) {
-        return console.log(1);
+        console.log(1);
     } else if (a == b) {
-        return console.log(0);
+        console.log(0);
     } else(console.log('Wrong input'))
 };
 // 4. Напиши функцію, яка обчислює факторіал переданого їй числа.
@@ -30,7 +30,7 @@ let minimumFour = function (num) {
 // 5. Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: цифри 1, 4, 9
 // перетворяться в число 149
 let minimumFive = function (a = 0, b = 0, c = 0) {
-    return console.log(String(a) + String(b) + String(c));
+    console.log(String(a) + String(b) + String(c));
 }
 // 6. Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо в функцію передали 1
 // параметр, то вона обчислює площу квадрата.
