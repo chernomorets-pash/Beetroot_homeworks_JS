@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main_style.css">
+    <title>Events</title>
+</head>
+
+<body class="app">
+    <div class="section-wrapper">
+        <h1 class="main-title">events</h1>
+        <section class="section first">
+            <h4>Task 1</h4>
+            <p>Створити HTML-сторінку для відображення/редагування тексту. При відкритті сторінки текст відображається
+                за
+                допомогою тега div. При натисканні Ctrl + E, замість div з'являється textarea з тим же текстом, який
+                тепер
+                можна
+                редагувати. При натисканні Ctrl +, замість textarea з'являється div з уже зміненим текстом. Не забудь
+                вимкнути
+                поведінку за замовчуванням для цих поєднань клавіш.</p>
+            <textarea class="hide" name="words" id="words-area" cols="30" rows="3"
+                placeholder="Enter your text"></textarea>
+            <div class="output no-edit">'text text text' Press Ctrl+E to edit</div>
+        </section>
+        <section class="section second">
+            <h4>Task 2</h4>
+            <p>Створити HTML-сторінку з великою таблицею. При кліку на заголовок стовпця, необхідно відсортувати дані
+                цього
+                стовпця. Врахуй, що числові значення повинні сортуватися як числа, а не як рядки.
+            </p>
+            <table class="table">
+                <tr class="table__titel">
+                    <th>Brand</th>
+                    <th>Country</th>
+                    <th>Engine</th>
+                    <th>Price</th>
+                </tr>
+                <tbody class="table__mod">
+
+                </tbody>
+            </table>
+        </section>
+        <section class="section three">
+            <p>Створити HTML-сторінку з блоком тексту в рамці. Реалізувати можливість змінювати розмір блоку, якщо
+                затиснути мишку в правому нижньому кутку і тягнути її далі.</p>
+            <div class="block">
+                <div class="block__item"></div>
+                <div class="block__item"></div>
+                <div class="block__item"></div>
+                <div class="block__item"></div>
+                <div class="block__item"></div>
+                <div class="block__item"></div>
+                <div class="block__item"></div>
+                <div class="block__item"></div>
+                <div class="block__item"></div>
+                <div class="block__item"></div>
+            </div>
+            <div class="block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur molestias dolorum
+                    officiis itaque magni minus id neque dolores facere, quae dolore ducimus delectus pariatur ullam
+                    ipsum ea, beatae illo?</p>
+            </div>
+        </section>
+    </div>
+    <script src="./app/main_script.js"></script>
+</body>
+
+</html>
