@@ -1,0 +1,45 @@
+/* Open props  */
+@import "https://unpkg.com/open-props";
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+/* Reseters */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+button {
+    cursor: pointer;
+    outline: none;
+}
+h3, h4 {
+    font-weight: 100;
+}
+/* Main styles */
+.app {
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--gray-9);
+    color: var(--gray-0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hw__wrapper {
+    height: 90vh;
+    width: 90vw;
+    margin: 5rem;
+    padding: 5rem;
+    background-color: var(--gray-8);
+    border-radius: var(--radius-blob-1);
+}
+.hw__title {
+    margin-bottom: 1rem;
+    color: var(--indigo-1);
+    text-shadow: 0 0 10px var(--indigo-5),0 0 25px var(--indigo-7);
+}
+.hw__link {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
